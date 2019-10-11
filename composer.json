@@ -1,6 +1,6 @@
 {
     "name": "babagana/json_merger",
-    "description": "A simple json merger package for merging json object/files into one.",
+    "description": "A simple json merger package for merging json objects or files into one.",
     "keywords": ["json", "merge", "json merge", "merger"],
     "homepage": "http://php.org",
     "type": "library",
