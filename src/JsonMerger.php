@@ -15,24 +15,23 @@ final class JsonMerger
      * @param mixed ...$sourceJsons
      * @return mixed
      */
-    public static function merge(...$sourceJsons): array
+    public static function merge(...$sourceJsons)
     {
         $sourceArray = [];
+
         foreach ($sourceJsons as $json) {
-            $sourceArray[] = json_decode($json);
+            $jsonObject     = \json_decode($json);
+            $jsonArray      = \get_object_vars($jsonObject);
+            $sourceArray[]  = $jsonArray;
         }
 
-        return json_encode((new self)->mergeArray(...$sourceArray), JSON_THROW_ON_ERROR, 512);
+        $mergedArray = (new self)->mergeArray(...$sourceArray);
+
+        return json_encode($mergedArray);
     }
 
-    private function mergeArray(array ...$sourceArray) : array
+    private function mergeArray(array ...$sourceArray): array
     {
-        $outputArray = [];
-
-        foreach ($sourceArray as $item) {
-            $outputArray[] = \array_merge($item);
-        }
-
-        return $outputArray;
+        return \array_merge(...$sourceArray);
     }
 }
