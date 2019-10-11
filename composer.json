@@ -1,0 +1,25 @@
+{
+    "name": "babagana/json_merger",
+    "description": "A simple json merger package for merging json object/files into one.",
+    "keywords": ["json", "merge", "json merge", "merger"],
+    "homepage": "http://php.org",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Babagana Zannah",
+            "email": "babagana.tech@gmail.com"
+        }
+    ],
+
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.6",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "BabaG\\JsonMerger\\": "src/"
+        }
+    }
+}
