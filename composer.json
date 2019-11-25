@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "BabaG\\JsonMerger\\": "src/"
+            "JsonMerger\\": "src/"
         }
     }
 }
